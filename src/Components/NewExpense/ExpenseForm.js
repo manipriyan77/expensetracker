@@ -6,18 +6,8 @@ const ExpenseForm = ({ onSave }) => {
   const [amount, setAmount] = useState("");
   const [date, setDate] = useState("");
 
-  // const [userInput, setUserInput] = useState({
-  //   title: "",
-  //   amount: "",
-  //   date: "",
-  // });
-
   const titleChangeHandler = (e) => {
     setTitle(e.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   title: "e.target.value",
-    // });
   };
 
   const amountChangeHandler = (event) => {
@@ -31,7 +21,6 @@ const ExpenseForm = ({ onSave }) => {
   // form submit handler
   const submitHandler = (event) => {
     event.preventDefault();
-    // console.log("submitted");
 
     const expenseData = {
       title, // title:title same as this
@@ -39,7 +28,6 @@ const ExpenseForm = ({ onSave }) => {
       date: new Date(date),
     };
     onSave(expenseData);
-    // console.log(expenseData);
     setAmount("");
     setTitle("");
     setDate("");

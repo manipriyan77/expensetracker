@@ -9,10 +9,12 @@ const NewExpense = ({ onAddExpense }) => {
       ...data,
       id: Math.random().toString(),
     };
+
     onAddExpense(expenseData);
     console.log(expenseData);
     return expenseData;
   };
+
   return (
     <div className="new-expense">
       <ExpenseForm onSave={newExpense} />
